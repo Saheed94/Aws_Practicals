@@ -1,0 +1,44 @@
+#######################################
+COMMON THREATS TO CLOUD INFRASTRUCTURE
+
+There are several threat to cloud infrastructure but theses are some of the most popular ones and the solution
+
+PROBLEMS				SOLUTION
+1. PHISHING: 				MULTIFACTOR AUTHENTICATION (MFA)
+2. EXPOSURE OF ACCESS KEYS		AWS STS
+3. AWS CREDENTIAL EXPOSURE		PASSWORD MANAGER
+4. NETWORK THREATS 			ENABLING FIREWALLS, PERFORMING VULNERABILITY SCANS
+########################################################################################################################################################################################################
+IDENTITY AND ACCESS MANAGEMENT (IAM)
+ IAM is an AWS service that sets permissions to allocate the right resources to the right person at the right time.
+
+IAM deals with four major terms and they are USERS, GROUPS, POLICIES, and ROLES
+
+WHO  ARE USERS: 
+ Users are set of permisiions  created for a person to have access to diffrent services on the AWS account based on thier skills and needs; in oreder to follow the principle of least priviledge, people are granting permissions on an account by creating a user profile for the person and would just be given access to a few services that the job role required of him.
+
+STEPS TO CREATE A USER
+1. search the IAM Cconsole
+2. click the USER bar
+3. click on craate USER
+4. and fill in the required details and click create
+###################################################################################################################################################################################################
+WHAT IS GROUPS:
+Groups are permissions created for a multitude of users in order for all to be under one category e.g you can create a group for the administrative Team to have access to EC2Fullaccess and put all tge admin users under this group
+##########################################################################################################################################################################################################
+WHAT IS POLICY:
+policy are permissions that are created to grant access for a user or groups.There are majorly 2 types of policies and these are  Standard policies and Custom policies; the standard policy are the default policy available on the aws i.e the ec2fullaccess, s3fullacess e.t.c while the Custom policy are the customised policy created based on the users interest e.g ability to create a restriction for a certain user not to be able to create a  resources beyond a specific region
+
+STEPS TO CREATE A CUSTOM POLICY
+
+1. search for the IAM console
+2. click on the POLICIES bar
+3. click create POLICY
+4. click choose a service
+5. on the drop down select the service you want to custom create e.g EC2
+6. under the policy editor select All EC2 actions or if you want to remove any specific EC2 features you can
+7. Under Resources sellect ALL 
+8. CLICK on REQUEST CONDITIONS and select ADD ANOTHER CONDITION
+9. input the condition you want to customised e.g ec2:region - this was selected becasue i want to restrict the regioin at which my users can create their EC2 instances to a specific region. in the bar leave the qualifier to default, under operator you can select(string-equals) under value you will input the specific region you want (AP-SOUTH-1) which is the mumbai region.
+10. 
+ 

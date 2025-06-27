@@ -46,4 +46,9 @@ Try creating your first IAM user:
 aws iam create-user --user-name test-user
 Explore the AWS IAM Documentation for deeper learning!
 
+![image](https://github.com/user-attachments/assets/0e79a65c-1b4f-4ad1-8bc2-cbbb127de784)
+
+
+
 IAM is your first line of defense in AWS – configure it wisely! 
+

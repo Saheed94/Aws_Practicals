@@ -3,7 +3,7 @@ This repository explains the major concepts and services in AWS cloud platform
 
 AWS IAM Explained Simply
 
- What is IAM?
+** What is IAM?**
 AWS Identity and Access Management (IAM) is like the security guard of your AWS account. It controls:
 
 WHO can access your cloud resources (users & roles)
@@ -48,11 +48,23 @@ Explore the AWS IAM Documentation for deeper learning!
 
 ![image](https://github.com/user-attachments/assets/0e79a65c-1b4f-4ad1-8bc2-cbbb127de784)
 
-
-
 IAM is your first line of defense in AWS – configure it wisely! 
+#########################################################################################################################################################################################
 
-AMI
+AWS AMI (Amazon Machine Image) Overview
+An AMI (Amazon Machine Image) is a pre-configured virtual machine image used to launch EC2 instances. It contains:
+
+OS (Amazon Linux, Ubuntu, Windows, etc.)
+
+Software (pre-installed apps, configurations)
+
+Permissions (launch controls via IAM roles)
+
+Key Features
+✅ Fast Deployment: Launch identical instances in seconds.
+✅ Customization: Create your own AMIs from existing instances.
+✅ Region-Specific: AMIs must be copied across regions.
+✅ Backup/Restore: Create AMIs from EBS snapshots.
 
 ![image](https://github.com/user-attachments/assets/83faea33-74b3-4b07-9fb9-248567dbd234)
 

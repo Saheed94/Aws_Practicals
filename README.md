@@ -52,3 +52,7 @@ Explore the AWS IAM Documentation for deeper learning!
 
 IAM is your first line of defense in AWS – configure it wisely! 
 
+AMI
+
+![image](https://github.com/user-attachments/assets/83faea33-74b3-4b07-9fb9-248567dbd234)
+

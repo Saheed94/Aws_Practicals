@@ -1,0 +1,51 @@
+
+Elastic Block Store (Amazon EBS)
+
+Amazon Elastic Block Store (Amazon EBS) provides scalable, high-performance block storage resources that can be used with Amazon Elastic Compute Cloud (Amazon EC2) instances. With Amazon Elastic Block Store, you can create and manage the following block storage resources:
+
+Amazon EBS volumes — These are storage volumes that you attach to Amazon EC2 instances. After you attach a volume to an instance, you can use it in the same way you would use a local hard drive attached to a computer, for example to store files or to install applications.
+
+Amazon EBS snapshots — These are point-in-time backups of Amazon EBS volumes that persist independently from the volume itself. You can create snapshots to back up the data on your Amazon EBS volumes. Youcan then restore new volumes from those snapshots at any time.
+
+
+STEPS IN CREATING EBS
+
+1. Navigte to instance on the AWS CONSOLE
+2. select volume under the EBS section
+3. select create volume (note: ensure your volume is in the same avalaibility zone you want to attach it to)
+4. then attach volume to the specific instance you want
+
+
+AFTER THE EBS CREATION; HOW TO ACCESS THE EBS AND SAVE A FILE IN IT
+
+1. Launch the  EC2 instances you have created the EBS 
+
+2.type (Isblk): this will show the device name and you will be able to see youe EBS 
+
+3. mkts-t ext4/dev/<device_name> (format the volume)
+mkfs-t ext /dev/xvdf   : this helps to format the volume. Note: the mentioned device name varies so check the device name and change it accordingly to the right name before you format 
+
+4. mkdir /mnt/mydisk : This helps to create a directory for the EBS volume 
+
+5. mount ‹device_name> ‹dir_name>
+mount /dev/xvdf /mnt/mydisk
+
+6. cd /mnt/mydisk
+
+7. create a test file: use vim or nano to create a file or document you want to share as you are already in the volume directory
+
+8. df -k, can see /dev/xvdf pointing to /mnt/mydisk
+
+9. umount /mnt/mydisk
+
+10. Create snapshot from the volume
+
+11. detach and delete the volume
+
+12. Copy the snapshot to another region
+
+13. Create a volume from the snapshot. attach to the EC2 instance in the dest region
+
+Conclusion: Here is how to create a volume and attach it to an instance and if the instance had issues or crash, if you had created a snapshot of the volume it is easier to copy the snapshot to another region and convert the snapshot to a volume and attach the new volume to a fresh instance in another region, with this we can easily save our file and documents without any fair of an instance crashing in a specific region.
+
+

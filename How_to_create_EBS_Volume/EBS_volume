@@ -22,8 +22,10 @@ AFTER THE EBS CREATION; HOW TO ACCESS THE EBS AND SAVE A FILE IN IT
 
 2.type (Isblk): this will show the device name and you will be able to see youe EBS 
 
-3. mkts-t ext4/dev/<device_name> (format the volume)
+3. mkts-t ext4/dev/<device_name> (format the volume for Linux server)
 mkfs-t ext /dev/xvdf   : this helps to format the volume. Note: the mentioned device name varies so check the device name and change it accordingly to the right name before you format 
+
+3b. formating a windows server : what we need to do is to initiate the run command and after that input this (diskmgmt.msc) then format the EBS disk
 
 4. mkdir /mnt/mydisk : This helps to create a directory for the EBS volume 
 
@@ -45,6 +47,7 @@ mount /dev/xvdf /mnt/mydisk
 12. Copy the snapshot to another region
 
 13. Create a volume from the snapshot. attach to the EC2 instance in the dest region
+
 
 Conclusion: Here is how to create a volume and attach it to an instance and if the instance had issues or crash, if you had created a snapshot of the volume it is easier to copy the snapshot to another region and convert the snapshot to a volume and attach the new volume to a fresh instance in another region, with this we can easily save our file and documents without any fair of an instance crashing in a specific region.
 

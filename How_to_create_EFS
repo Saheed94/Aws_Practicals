@@ -1,0 +1,15 @@
+ Amazon Elastic File System (Amazon EFS) provides serverless, fully elastic file storage so that you can share file data without provisioning or managing storage capacity and performance. Amazon EFS is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files.
+
+STEPS TO CREATE EFS
+1. on the search bar on AWS type EFS 
+2. navigate to to create EFS 
+3. inpute your efs name 
+4. click on the EFS you have created navigate to netwok 
+5. on the Security group of your AWS console craete an NFS with port 2049 
+6. navigate back to the EFS and attach your AZ  to the new security group of nfs you have created
+7. login to your instances
+8. install the efs client on each instances for linux server use this ( yum install -y amazon-efs-utils)
+9. create a directory for the efs (mkdir efs)
+10. mount the EFS (mount -t efs «filesystem_ID>:/ efs note;The filesystem_ID can be gotten from the AWS EFS console your created
+11. cd to the efs directory you initially created and create a file 
+12 Reapeate the same to other instances you want to share the EFS you creted, be mindful that all instances must be within the same region, but can be in different availability zone.
